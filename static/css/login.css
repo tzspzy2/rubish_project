@@ -1,0 +1,99 @@
+html{
+    background: url(./../img/login_pic/background.png) no-repeat;
+    background-size: 100% 100%;
+}
+body{
+    background: transparent;
+}
+.logo{
+    background: transparent;
+    padding:60px 94px;
+    color: #fff;
+    font-size:30px;
+
+}
+.center_login{
+    max-width: 540px;
+    max-height: 420px;
+    margin: auto;
+    color: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 10px;
+    text-align: center;
+    border:2px solid #fff;
+    background:rgba(225,225,225,0.2) ;
+}
+.logo_form{
+    font-size: 30px;
+   font-family: "Courier New", Courier, monospace;
+    padding: 15px 0px 0px;
+}
+.form_input,input[type=text],input[type=password]{
+    width:340px;
+    height: 40px;
+    border:none;
+    outline: none;
+    background: #fff;
+
+}
+.form_box{
+    background: #FFF;
+    width: 378px;
+    height: 45px;
+    margin-left: 76px;
+    line-height:45px;
+    margin-top: 24px;
+    border-radius: 5px;
+}
+.test input[type=text],.form_input_test{
+    width: 210px;
+    height: 40px;
+    border:none;
+    outline: none;
+}
+.test{
+    background: #FFF;
+    width: 220px;
+    height: 45px;
+    margin-left: 76px;
+    line-height:45px;
+    margin-top: 24px;
+    border-radius: 5px;
+    display: inline-block;
+    float: left;
+
+}
+
+.img{
+    background: #FFF;
+    width: 140px;
+    height: 45px;
+    margin-left: 18px;
+    margin-top: 24px;
+    border-radius: 5px;
+    display: inline-block;
+    float: left;
+}
+.form_box_check{
+    width: 378px;
+    height: 45px;
+    margin-left: 76px;
+    line-height:45px;
+    margin-top: 24px;
+    border-radius: 5px;
+}
+.button{
+    width: 380px;
+    height: 45px;
+    background: #1199FF;
+    border:none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+
+

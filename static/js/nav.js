@@ -1,0 +1,233 @@
+function Nav( container,type ){
+	this.container = container;
+	this.type = type;
+	this.createDom();
+	//this.handleChange();
+}
+
+var city_shtml='';
+city_shtml += '<ul class="nav nav-list">';
+city_shtml += '				<!-- 一级菜单 -->';
+city_shtml += '				<li class="">';
+city_shtml += '					<a href="city_index.html?type=city&text=city_index">';
+city_shtml += '						<i class="menu-icon fa fa-home"></i>';
+city_shtml += '						<span class="menu-text"> 首页 </span>';
+city_shtml += '					</a>';
+city_shtml += '					';
+city_shtml += '					<b class="arrow"></b>';
+city_shtml += '				</li>';
+city_shtml += '				';
+city_shtml += '				<!-- 一级菜单 -->';
+city_shtml += '				<li class="">';
+city_shtml += '					<a href="#" class="dropdown-toggle">';
+city_shtml += '						<i class="menu-icon icon iconfont icon-app3"></i>';
+city_shtml += '						<span class="menu-text">';
+city_shtml += '							APP管理';
+city_shtml += '						</span>';
+city_shtml += '						<b class="arrow fa fa-angle-down"></b>';
+city_shtml += '					</a>';
+city_shtml += '					<b class="arrow"></b>';
+city_shtml += '					<!--二级菜单-->';
+city_shtml += '					<ul class="submenu">';
+city_shtml += '						<li class="">';
+city_shtml += '							<a href="setBasicInfo.html?type=city&text=basicinfo">';
+city_shtml += '								<i class="menu-icon fa fa-caret-right"></i> 设置基本信息';
+city_shtml += '							</a>';
+city_shtml += '							<b class="arrow"></b>';
+city_shtml += '						</li>';
+city_shtml += '						<li class="">';
+city_shtml += '							<a href="seeTemplate.html?type=city&text=showtemplate">';
+city_shtml += '								<i class="menu-icon fa fa-caret-right"></i> 查看模板';
+city_shtml += '							</a>';
+city_shtml += '							<b class="arrow"></b>';
+city_shtml += '						</li>';
+city_shtml += '						<li class="">';
+city_shtml += '							<a href="setup_skin.html?type=city&text=setupskin">';
+city_shtml += '								<i class="menu-icon fa fa-caret-right"></i> 设置皮肤';
+city_shtml += '							</a>';
+city_shtml += '							<b class="arrow"></b>';
+city_shtml += '						</li>';
+city_shtml += '						<li class="">';
+city_shtml += '							<a href="editor_city_index.html?type=city&text=editorcityindex">';
+city_shtml += '								<i class="menu-icon fa fa-caret-right"></i> 编辑首页';
+city_shtml += '							</a>';
+city_shtml += '							<b class="arrow"></b>';
+city_shtml += '						</li>';
+city_shtml += '						<li class="">';
+city_shtml += '							<a href="edit_government.html?type=city&text=editgovernment">';
+city_shtml += '								<i class="menu-icon fa fa-caret-right"></i> 编辑政务';
+city_shtml += '							</a>';
+city_shtml += '							<b class="arrow"></b>';
+city_shtml += '						</li>';
+city_shtml += '						<li class="">';
+city_shtml += '							<a href="edit_life.html?type=city&text=editlife">';
+city_shtml += '								<i class="menu-icon fa fa-caret-right"></i> 编辑生活';
+city_shtml += '							</a>';
+city_shtml += '							<b class="arrow"></b>';
+city_shtml += '						</li>';
+city_shtml += '					</ul>';
+city_shtml += '				</li>';
+city_shtml += '				<!-- 一级菜单 -->';
+city_shtml += '				<li class="">';
+city_shtml += '					<a href="app_management.html?type=city&text=app_management">';
+city_shtml += '						<i class="menu-icon icon iconfont icon-gaiicon-"></i>';
+city_shtml += '						<span class="menu-text"> 应用管理 </span>';
+city_shtml += '					</a>'; 
+city_shtml += '				</li>';
+city_shtml += '				<!-- 一级菜单 -->';
+city_shtml += '				<li class="">';
+city_shtml += '					<a href="newsletter.html?type=city&text=newsletter">';
+city_shtml += '						<i class="menu-icon icon iconfont icon-kuaixun1"></i>';
+city_shtml += '						<span class="menu-text"> 快讯管理 </span>';
+city_shtml += '					</a>';
+city_shtml += '					';
+city_shtml += '             </li>  ';
+city_shtml += '				<!-- 一级菜单 -->';
+city_shtml += '				<li class="">';
+city_shtml += '					<a href="advertisement.html?type=city&text=advertisement">';
+city_shtml += '						<i class="menu-icon icon iconfont icon-guanggao1"></i>';
+city_shtml += '						<span class="menu-text"> 广告管理 </span>';
+city_shtml += '					</a>';
+city_shtml += '					';
+city_shtml += '					<b class="arrow"></b>';
+city_shtml += '				</li>';
+city_shtml += '				<!-- 一级菜单 -->';
+city_shtml += '				<li class="">';
+city_shtml += '					<a href="#" class="dropdown-toggle">';
+city_shtml += '						<i class="menu-icon icon iconfont icon-feiyongshenpiliebiao"></i>';
+city_shtml += '						<span class="menu-text"> 审批列表 </span>';
+city_shtml += '						<b class="arrow fa fa-angle-down"></b>';
+city_shtml += '					</a>';
+city_shtml += '					<b class="arrow"></b>';
+city_shtml += '					<ul class="submenu">';
+city_shtml += '						<li class="">';
+city_shtml += '							<a href="check_newsletter_list.html?type=city&text=check_newsletter">';
+city_shtml += '								<i class="menu-icon fa fa-caret-right"></i> 快讯审批';
+city_shtml += '							</a>';
+city_shtml += '						</li>';
+city_shtml += '						<li class="">';
+city_shtml += '							<a href="check_app_list.html?type=city&text=check_app">';
+city_shtml += '								<i class="menu-icon fa fa-caret-right"></i> 应用审批';
+city_shtml += '							</a>';
+city_shtml += '							<b class="arrow"></b>';
+city_shtml += '						</li>';
+city_shtml += '						<li class="">';
+city_shtml += '							<a href="check_advertisement_list.html?type=city&text=check_advertisement">';
+city_shtml += '								<i class="menu-icon fa fa-caret-right"></i> 广告审批';
+city_shtml += '							</a>';
+city_shtml += '							<b class="arrow"></b>';
+city_shtml += '						</li>';
+city_shtml += '					</ul>';
+city_shtml += '				</li>';
+city_shtml += '				<!-- 一级菜单 -->';
+city_shtml += '				<li class="">';
+city_shtml += '					<a href="app_user_center.html?type=city&text=app_user_center">';
+city_shtml += '						<i class="menu-icon icon iconfont icon-yonghuguanli"></i>';
+city_shtml += '						<span class="menu-text"> APP用户管理 </span>';
+city_shtml += '					</a>';
+city_shtml += '				</li>';
+city_shtml += '				<!-- 一级菜单 -->';
+city_shtml += '				<li class="">';
+city_shtml += '					<a href="#" class="dropdown-toggle">';
+city_shtml += '						<i class="menu-icon fa fa-cogs"></i>';
+city_shtml += '						<span class="menu-text"> 系统配置 </span>';
+city_shtml += '						<b class="arrow fa fa-angle-down"></b>';
+city_shtml += '					</a>';
+city_shtml += '					<b class="arrow"></b>';
+city_shtml += '					<ul class="submenu">';
+city_shtml += '						<li class="">';
+city_shtml += '							<a href="account_manage.html?type=city&text=account_manage">';
+city_shtml += '								<i class="menu-icon fa fa-caret-right"></i> 账户管理';
+city_shtml += '							</a>';
+city_shtml += '						</li>';
+city_shtml += '						<li class="">';
+city_shtml += '							<a href="RightsManagement.html?type=city&text=RightsManagement">';
+city_shtml += '								<i class="menu-icon fa fa-caret-right"></i> 角色权限管理';
+city_shtml += '							</a>';
+city_shtml += '							<b class="arrow"></b>';
+city_shtml += '						</li>';
+city_shtml += '					</ul>';
+city_shtml += '				</li>';
+city_shtml += '			</ul>';
+
+var system_shtml = '';
+system_shtml += '<ul class="nav nav-list">';
+system_shtml += '				<li class="">';
+system_shtml += '					<a  href="system_management.html?type=system&text=system_management">';
+system_shtml += '						<i class="menu-icon icon iconfont icon-chengshiguanli1"></i>';
+system_shtml += '						<span class="menu-text"> 城市管理 </span>';
+system_shtml += '					</a>';
+system_shtml += '				</li>';
+system_shtml += '				<li class="">';
+system_shtml += '					<a href="UserManagement.html?type=system&text=system_indexaa">';
+system_shtml += '						<i class="menu-icon icon iconfont icon-yonghuguanli"></i>';
+system_shtml += '						<span class="menu-text"> 用户管理 </span>';
+system_shtml += '					</a>';
+system_shtml += '				</li>';
+system_shtml += '				<li class="">';
+system_shtml += '					<a href="RightsManagement.html?type=system&text=RightsManagement">';
+system_shtml += '						<i class="menu-icon icon iconfont icon-quanxian"></i>';
+system_shtml += '						<span class="menu-text"> 权限管理 </span>';
+system_shtml += '					</a>';
+system_shtml += '				</li>';
+system_shtml += '				<li class="">';
+system_shtml += '					<a href="CommodityManagement.html?type=system&text=CommodityManagement">';
+system_shtml += '						<i class="menu-icon icon iconfont icon-shangpinguanli3"></i>';
+system_shtml += '						<span class="menu-text"> 商品管理 </span>';
+system_shtml += '					</a>';
+system_shtml += '				</li>';
+system_shtml += '				<li class="">';
+system_shtml += '					<a href="order_manage.html?type=system&text=order_manage">';
+system_shtml += '						<i class="menu-icon icon iconfont icon-dingdanguanli"></i>';
+system_shtml += '						<span class="menu-text"> 订单管理 </span>';
+system_shtml += '					</a>';
+system_shtml += '					';
+system_shtml += '					<b class="arrow"></b>';
+system_shtml += '				</li>';
+system_shtml += '				<li class="">';
+system_shtml += '					<a href="selfPickUpSite.html?type=system&text=selfPickUpSite">';
+system_shtml += '						<i class="menu-icon icon iconfont icon-ziyuan"></i>';
+system_shtml += '						<span class="menu-text"> 自提点管理 </span>';
+system_shtml += '					</a>';
+system_shtml += '					';
+system_shtml += '					<b class="arrow"></b>';
+system_shtml += '				</li>';
+system_shtml += '				<li class="">';
+system_shtml += '					<a href="Version.html?type=system&text=Version">';
+system_shtml += '						<i class="menu-icon icon iconfont icon-banben"></i>';
+system_shtml += '						<span class="menu-text"> APP版本管理 </span>';
+system_shtml += '					</a>';
+system_shtml += '					<b class="arrow"></b>';
+system_shtml += '				</li>';
+system_shtml += '			</ul>';
+
+$.extend(Nav.prototype,{
+	createDom:function(){
+		var shtml = '';
+		if( this.type=='system' ){
+			shtml = system_shtml;
+		}else{
+			shtml = city_shtml;
+		}
+		var navDom = document.createElement("div");
+		navDom.innerHTML=shtml;
+		$(this.container).html(navDom);
+		var text = 'city_index';
+		if( window.location.search ){
+			text = window.location.search.split("&")[1].split("=")[1];
+		}
+
+		$.each($(".JS-nav a"),function(index,item ){
+			var a_text = $(item).attr("href");
+			var active = '';
+			if(a_text&&a_text != '#' ){
+				active = a_text.split("&")[1].split("=")[1];
+			}
+
+			if( active == text ){
+				$(item).closest("li").addClass("active");
+				$(item).closest("ul").closest("li").addClass("open active");
+			}
+		})
+	}
+})
